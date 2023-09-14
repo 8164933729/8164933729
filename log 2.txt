@@ -1,0 +1,1637 @@
+[00:00:00] Build started
+[00:00:00] git clone -q --depth=10 https://github.com/atom/node-keytar.git C:\projects\node-keytar
+[00:00:01] git fetch -q origin +refs/pull/360/merge:
+[00:00:01] git checkout -qf FETCH_HEAD
+[00:00:02] Restoring build cache
+[00:00:02] 
+[00:00:02] Cache 'node_modules' - Downloading (55,105,029 bytes)...1%
+[00:00:02] Cache 'node_modules' - Downloading (55,105,029 bytes)...10%
+[00:00:02] Cache 'node_modules' - Downloading (55,105,029 bytes)...20%
+[00:00:02] Cache 'node_modules' - Downloading (55,105,029 bytes)...30%
+[00:00:02] Cache 'node_modules' - Downloading (55,105,029 bytes)...40%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...50%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...60%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...70%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...80%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...90%
+[00:00:03] Cache 'node_modules' - Downloading (55,105,029 bytes)...100%
+[00:00:11] Cache 'node_modules' - Unzipping...
+[00:00:11] Cache 'node_modules' - Restored
+[00:00:11] Running Install scripts
+[00:00:11] Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version) $env:PLATFORM
+[00:00:11] Updating Node.js v15.11.0 (x64)
+[00:00:11] Uninstalling Node.js v8.17.0 (x86)...
+[00:01:35] Installing Node.js v15.11.0 (x64)...
+[00:01:45] npm install
+[00:01:47] 
+[00:01:47] > keytar@7.4.0 install
+[00:01:47] > prebuild-install || npm run build
+[00:01:47] 
+[00:01:48] 
+[00:01:48] up to date, audited 417 packages in 2s
+[00:01:48] 
+[00:01:48] 2 low severity vulnerabilities
+[00:01:48] 
+[00:01:48] To address all issues, run:
+[00:01:48]   npm audit fix
+[00:01:48] 
+[00:01:48] Run `npm audit` for details.
+[00:01:48] npm test
+[00:01:49] 
+[00:01:49] > keytar@7.4.0 test
+[00:01:49] > npm run lint && npm rebuild && mocha --require babel-core/register spec/
+[00:01:49] 
+[00:01:50] 
+[00:01:50] > keytar@7.4.0 lint
+[00:01:50] > npm run cpplint
+[00:01:50] 
+[00:01:51] 
+[00:01:51] > keytar@7.4.0 cpplint
+[00:01:51] > node-cpplint --filters legal-copyright,build-include,build-namespaces src/*.cc
+[00:01:51] 
+[00:01:53] rebuilt dependencies successfully
+[00:01:54] 
+[00:01:54] 
+[00:01:54]   keytar
+[00:01:54]     setPassword/getPassword(service, account)
+[00:01:54]       √ sets and yields the password for the service and account
+[00:01:54]       √ yields null when the password was not found
+[00:01:54]       error handling
+[00:01:54]         setPassword
+[00:01:54]           √ handles when an object is provided for service
+[00:01:54]           √ handles when an object is provided for username
+[00:01:54]           √ handles when an object is provided for password
+[00:01:54]         getPassword
+[00:01:54]           √ handles when an object is provided for service
+[00:01:54]           √ handles when an object is provided for username
+[00:01:54]       Unicode support
+[00:01:54]         √ handles unicode strings everywhere
+[00:01:54]     deletePassword(service, account)
+[00:01:54]       √ yields true when the password was deleted
+[00:01:54]       √ yields false when the password didn't exist
+[00:01:54]       error handling
+[00:01:54]         √ handles when an object is provided for service
+[00:01:54]         √ handles when an object is provided for username
+[00:01:54]     findPassword(service)
+[00:01:54]       √ yields a password for the service
+[00:01:54]       √ yields null when no password can be found
+[00:01:54]       √ handles when an object is provided for service
+[00:01:54]     findCredentials(service)
+[00:01:54]       √ yields an array of the credentials
+[00:01:54]       √ returns an empty array when no credentials are found
+[00:01:54]       √ handles when an object is provided for service
+[00:01:54]       Unicode support
+[00:01:54]         √ handles unicode strings everywhere
+[00:01:54] 
+[00:01:54] 
+[00:01:54]   19 passing (75ms)
+[00:01:54] 
+[00:01:55] npm run prebuild-node
+[00:01:55] 
+[00:01:55] > keytar@7.4.0 prebuild-node
+[00:01:55] > prebuild -t 8.9.0 -t 9.4.0 -t 10.11.0 -t 11.9.0 -t 12.0.0 -t 13.0.0 -t 14.0.0 -t 15.0.0 --strip
+[00:01:55] 
+[00:01:56] prebuild info begin Prebuild version 10.0.1
+[00:01:56] prebuild info build Preparing to prebuild keytar@7.4.0 for node 8.9.0 on win32-x64 using node-gyp
+[00:01:56] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:01:56] prebuild http GET https://nodejs.org/dist/v8.9.0/node-v8.9.0-headers.tar.gz
+[00:01:56] prebuild http 200 https://nodejs.org/dist/v8.9.0/node-v8.9.0-headers.tar.gz
+[00:01:56] prebuild http GET https://nodejs.org/dist/v8.9.0/SHASUMS256.txt
+[00:01:56] prebuild http GET https://nodejs.org/dist/v8.9.0/win-x86/node.lib
+[00:01:56] prebuild http GET https://nodejs.org/dist/v8.9.0/win-arm64/node.lib
+[00:01:56] prebuild http GET https://nodejs.org/dist/v8.9.0/win-x64/node.lib
+[00:01:57] prebuild http 200 https://nodejs.org/dist/v8.9.0/SHASUMS256.txt
+[00:01:57] prebuild http 200 https://nodejs.org/dist/v8.9.0/win-x86/node.lib
+[00:01:57] prebuild http 404 https://nodejs.org/dist/v8.9.0/win-arm64/node.lib
+[00:01:57] prebuild http 200 https://nodejs.org/dist/v8.9.0/win-x64/node.lib
+[00:01:57] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:01:57] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:01:57] prebuild info find VS run with --verbose for detailed information
+[00:01:57] prebuild info spawn C:\Python27\python.exe
+[00:01:57] prebuild info spawn args [
+[00:01:57] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:01:57] prebuild info spawn args   'binding.gyp',
+[00:01:57] prebuild info spawn args   '-f',
+[00:01:57] prebuild info spawn args   'msvs',
+[00:01:57] prebuild info spawn args   '-I',
+[00:01:57] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:01:57] prebuild info spawn args   '-I',
+[00:01:57] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:01:57] prebuild info spawn args   '-I',
+[00:01:57] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\8.9.0\\include\\node\\common.gypi',
+[00:01:57] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:01:57] prebuild info spawn args   '-Dvisibility=default',
+[00:01:57] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\8.9.0',
+[00:01:57] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:01:57] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\8.9.0\\\\<(target_arch)\\\\node.lib',
+[00:01:57] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:01:57] prebuild info spawn args   '-Dnode_engine=v8',
+[00:01:57] prebuild info spawn args   '--depth=.',
+[00:01:57] prebuild info spawn args   '--no-parallel',
+[00:01:57] prebuild info spawn args   '--generator-output',
+[00:01:57] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:01:57] prebuild info spawn args   '-Goutput_dir=.'
+[00:01:57] prebuild info spawn args ]
+[00:01:58] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:01:58] prebuild info spawn args [
+[00:01:58] prebuild info spawn args   'build/binding.sln',
+[00:01:58] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:01:58] prebuild info spawn args   '/nologo',
+[00:01:58] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:01:58] prebuild info spawn args ]
+[00:01:59] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:02]   async.cc
+[00:02:02]   main.cc
+[00:02:03]   keytar_win.cc
+[00:02:03]   win_delay_load_hook.cc
+[00:02:04]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:04]   Generating code
+[00:02:05]   Finished generating code
+[00:02:05]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:09] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:09] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v57-win32-x64.tar.gz
+[00:02:09] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v57-win32-x64.tar.gz
+[00:02:09] prebuild info build Preparing to prebuild keytar@7.4.0 for node 9.4.0 on win32-x64 using node-gyp
+[00:02:09] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:09] prebuild http GET https://nodejs.org/dist/v9.4.0/node-v9.4.0-headers.tar.gz
+[00:02:09] prebuild http 200 https://nodejs.org/dist/v9.4.0/node-v9.4.0-headers.tar.gz
+[00:02:09] prebuild http GET https://nodejs.org/dist/v9.4.0/SHASUMS256.txt
+[00:02:09] prebuild http GET https://nodejs.org/dist/v9.4.0/win-x86/node.lib
+[00:02:09] prebuild http GET https://nodejs.org/dist/v9.4.0/win-arm64/node.lib
+[00:02:09] prebuild http GET https://nodejs.org/dist/v9.4.0/win-x64/node.lib
+[00:02:09] prebuild http 404 https://nodejs.org/dist/v9.4.0/win-arm64/node.lib
+[00:02:09] prebuild http 200 https://nodejs.org/dist/v9.4.0/win-x64/node.lib
+[00:02:09] prebuild http 200 https://nodejs.org/dist/v9.4.0/SHASUMS256.txt
+[00:02:09] prebuild http 200 https://nodejs.org/dist/v9.4.0/win-x86/node.lib
+[00:02:10] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:02:10] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:02:10] prebuild info find VS run with --verbose for detailed information
+[00:02:10] prebuild info spawn C:\Python27\python.exe
+[00:02:10] prebuild info spawn args [
+[00:02:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:02:10] prebuild info spawn args   'binding.gyp',
+[00:02:10] prebuild info spawn args   '-f',
+[00:02:10] prebuild info spawn args   'msvs',
+[00:02:10] prebuild info spawn args   '-I',
+[00:02:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:02:10] prebuild info spawn args   '-I',
+[00:02:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:02:10] prebuild info spawn args   '-I',
+[00:02:10] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\9.4.0\\include\\node\\common.gypi',
+[00:02:10] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:02:10] prebuild info spawn args   '-Dvisibility=default',
+[00:02:10] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\9.4.0',
+[00:02:10] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:02:10] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\9.4.0\\\\<(target_arch)\\\\node.lib',
+[00:02:10] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:02:10] prebuild info spawn args   '-Dnode_engine=v8',
+[00:02:10] prebuild info spawn args   '--depth=.',
+[00:02:10] prebuild info spawn args   '--no-parallel',
+[00:02:10] prebuild info spawn args   '--generator-output',
+[00:02:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:02:10] prebuild info spawn args   '-Goutput_dir=.'
+[00:02:10] prebuild info spawn args ]
+[00:02:10] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:02:10] prebuild info spawn args [
+[00:02:10] prebuild info spawn args   'build/binding.sln',
+[00:02:10] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:02:10] prebuild info spawn args   '/nologo',
+[00:02:10] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:02:10] prebuild info spawn args ]
+[00:02:11] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:13]   async.cc
+[00:02:13]   main.cc
+[00:02:13]   keytar_win.cc
+[00:02:13]   win_delay_load_hook.cc
+[00:02:14]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:14]   Generating code
+[00:02:15]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:02:15]   Finished generating code
+[00:02:15]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:18] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:18] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v59-win32-x64.tar.gz
+[00:02:18] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v59-win32-x64.tar.gz
+[00:02:18] prebuild info build Preparing to prebuild keytar@7.4.0 for node 10.11.0 on win32-x64 using node-gyp
+[00:02:18] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:18] prebuild http GET https://nodejs.org/dist/v10.11.0/node-v10.11.0-headers.tar.gz
+[00:02:18] prebuild http 200 https://nodejs.org/dist/v10.11.0/node-v10.11.0-headers.tar.gz
+[00:02:19] prebuild http GET https://nodejs.org/dist/v10.11.0/SHASUMS256.txt
+[00:02:19] prebuild http GET https://nodejs.org/dist/v10.11.0/win-x86/node.lib
+[00:02:19] prebuild http GET https://nodejs.org/dist/v10.11.0/win-arm64/node.lib
+[00:02:19] prebuild http GET https://nodejs.org/dist/v10.11.0/win-x64/node.lib
+[00:02:19] prebuild http 200 https://nodejs.org/dist/v10.11.0/SHASUMS256.txt
+[00:02:19] prebuild http 404 https://nodejs.org/dist/v10.11.0/win-arm64/node.lib
+[00:02:19] prebuild http 200 https://nodejs.org/dist/v10.11.0/win-x64/node.lib
+[00:02:19] prebuild http 200 https://nodejs.org/dist/v10.11.0/win-x86/node.lib
+[00:02:20] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:02:20] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:02:20] prebuild info find VS run with --verbose for detailed information
+[00:02:20] prebuild info spawn C:\Python27\python.exe
+[00:02:20] prebuild info spawn args [
+[00:02:20] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:02:20] prebuild info spawn args   'binding.gyp',
+[00:02:20] prebuild info spawn args   '-f',
+[00:02:20] prebuild info spawn args   'msvs',
+[00:02:20] prebuild info spawn args   '-I',
+[00:02:20] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:02:20] prebuild info spawn args   '-I',
+[00:02:20] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:02:20] prebuild info spawn args   '-I',
+[00:02:20] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\10.11.0\\include\\node\\common.gypi',
+[00:02:20] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:02:20] prebuild info spawn args   '-Dvisibility=default',
+[00:02:20] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\10.11.0',
+[00:02:20] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:02:20] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\10.11.0\\\\<(target_arch)\\\\node.lib',
+[00:02:20] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:02:20] prebuild info spawn args   '-Dnode_engine=v8',
+[00:02:20] prebuild info spawn args   '--depth=.',
+[00:02:20] prebuild info spawn args   '--no-parallel',
+[00:02:20] prebuild info spawn args   '--generator-output',
+[00:02:20] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:02:20] prebuild info spawn args   '-Goutput_dir=.'
+[00:02:20] prebuild info spawn args ]
+[00:02:20] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:02:20] prebuild info spawn args [
+[00:02:20] prebuild info spawn args   'build/binding.sln',
+[00:02:20] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:02:20] prebuild info spawn args   '/nologo',
+[00:02:20] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:02:20] prebuild info spawn args ]
+[00:02:20] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:22]   async.cc
+[00:02:22]   main.cc
+[00:02:23]   keytar_win.cc
+[00:02:23]   win_delay_load_hook.cc
+[00:02:24]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:24]   Generating code
+[00:02:24]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:02:24]   Finished generating code
+[00:02:25]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:28] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:28] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v64-win32-x64.tar.gz
+[00:02:28] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v64-win32-x64.tar.gz
+[00:02:28] prebuild info build Preparing to prebuild keytar@7.4.0 for node 11.9.0 on win32-x64 using node-gyp
+[00:02:28] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:28] prebuild http GET https://nodejs.org/dist/v11.9.0/node-v11.9.0-headers.tar.gz
+[00:02:28] prebuild http 200 https://nodejs.org/dist/v11.9.0/node-v11.9.0-headers.tar.gz
+[00:02:29] prebuild http GET https://nodejs.org/dist/v11.9.0/SHASUMS256.txt
+[00:02:29] prebuild http GET https://nodejs.org/dist/v11.9.0/win-x86/node.lib
+[00:02:29] prebuild http GET https://nodejs.org/dist/v11.9.0/win-x64/node.lib
+[00:02:29] prebuild http GET https://nodejs.org/dist/v11.9.0/win-arm64/node.lib
+[00:02:29] prebuild http 200 https://nodejs.org/dist/v11.9.0/SHASUMS256.txt
+[00:02:29] prebuild http 404 https://nodejs.org/dist/v11.9.0/win-arm64/node.lib
+[00:02:29] prebuild http 200 https://nodejs.org/dist/v11.9.0/win-x64/node.lib
+[00:02:29] prebuild http 200 https://nodejs.org/dist/v11.9.0/win-x86/node.lib
+[00:02:30] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:02:30] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:02:30] prebuild info find VS run with --verbose for detailed information
+[00:02:30] prebuild info spawn C:\Python27\python.exe
+[00:02:30] prebuild info spawn args [
+[00:02:30] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:02:30] prebuild info spawn args   'binding.gyp',
+[00:02:30] prebuild info spawn args   '-f',
+[00:02:30] prebuild info spawn args   'msvs',
+[00:02:30] prebuild info spawn args   '-I',
+[00:02:30] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:02:30] prebuild info spawn args   '-I',
+[00:02:30] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:02:30] prebuild info spawn args   '-I',
+[00:02:30] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\11.9.0\\include\\node\\common.gypi',
+[00:02:30] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:02:30] prebuild info spawn args   '-Dvisibility=default',
+[00:02:30] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\11.9.0',
+[00:02:30] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:02:30] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\11.9.0\\\\<(target_arch)\\\\node.lib',
+[00:02:30] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:02:30] prebuild info spawn args   '-Dnode_engine=v8',
+[00:02:30] prebuild info spawn args   '--depth=.',
+[00:02:30] prebuild info spawn args   '--no-parallel',
+[00:02:30] prebuild info spawn args   '--generator-output',
+[00:02:30] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:02:30] prebuild info spawn args   '-Goutput_dir=.'
+[00:02:30] prebuild info spawn args ]
+[00:02:30] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:02:30] prebuild info spawn args [
+[00:02:30] prebuild info spawn args   'build/binding.sln',
+[00:02:30] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:02:30] prebuild info spawn args   '/nologo',
+[00:02:30] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:02:30] prebuild info spawn args ]
+[00:02:30] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:32]   async.cc
+[00:02:32]   main.cc
+[00:02:33]   keytar_win.cc
+[00:02:33]   win_delay_load_hook.cc
+[00:02:34]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:34]   Generating code
+[00:02:35]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:02:35]   Finished generating code
+[00:02:35]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:38] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:38] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v67-win32-x64.tar.gz
+[00:02:38] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v67-win32-x64.tar.gz
+[00:02:38] prebuild info build Preparing to prebuild keytar@7.4.0 for node 12.0.0 on win32-x64 using node-gyp
+[00:02:38] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:38] prebuild http GET https://nodejs.org/dist/v12.0.0/node-v12.0.0-headers.tar.gz
+[00:02:38] prebuild http 200 https://nodejs.org/dist/v12.0.0/node-v12.0.0-headers.tar.gz
+[00:02:39] prebuild http GET https://nodejs.org/dist/v12.0.0/SHASUMS256.txt
+[00:02:39] prebuild http GET https://nodejs.org/dist/v12.0.0/win-x86/node.lib
+[00:02:39] prebuild http GET https://nodejs.org/dist/v12.0.0/win-x64/node.lib
+[00:02:39] prebuild http GET https://nodejs.org/dist/v12.0.0/win-arm64/node.lib
+[00:02:39] prebuild http 404 https://nodejs.org/dist/v12.0.0/win-arm64/node.lib
+[00:02:39] prebuild http 200 https://nodejs.org/dist/v12.0.0/SHASUMS256.txt
+[00:02:39] prebuild http 200 https://nodejs.org/dist/v12.0.0/win-x64/node.lib
+[00:02:39] prebuild http 200 https://nodejs.org/dist/v12.0.0/win-x86/node.lib
+[00:02:40] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:02:40] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:02:40] prebuild info find VS run with --verbose for detailed information
+[00:02:40] prebuild info spawn C:\Python27\python.exe
+[00:02:40] prebuild info spawn args [
+[00:02:40] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:02:40] prebuild info spawn args   'binding.gyp',
+[00:02:40] prebuild info spawn args   '-f',
+[00:02:40] prebuild info spawn args   'msvs',
+[00:02:40] prebuild info spawn args   '-I',
+[00:02:40] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:02:40] prebuild info spawn args   '-I',
+[00:02:40] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:02:40] prebuild info spawn args   '-I',
+[00:02:40] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\12.0.0\\include\\node\\common.gypi',
+[00:02:40] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:02:40] prebuild info spawn args   '-Dvisibility=default',
+[00:02:40] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\12.0.0',
+[00:02:40] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:02:40] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\12.0.0\\\\<(target_arch)\\\\node.lib',
+[00:02:40] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:02:40] prebuild info spawn args   '-Dnode_engine=v8',
+[00:02:40] prebuild info spawn args   '--depth=.',
+[00:02:40] prebuild info spawn args   '--no-parallel',
+[00:02:40] prebuild info spawn args   '--generator-output',
+[00:02:40] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:02:40] prebuild info spawn args   '-Goutput_dir=.'
+[00:02:40] prebuild info spawn args ]
+[00:02:40] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:02:40] prebuild info spawn args [
+[00:02:40] prebuild info spawn args   'build/binding.sln',
+[00:02:40] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:02:40] prebuild info spawn args   '/nologo',
+[00:02:40] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:02:40] prebuild info spawn args ]
+[00:02:41] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:43]   async.cc
+[00:02:43]   main.cc
+[00:02:44]   keytar_win.cc
+[00:02:44]   win_delay_load_hook.cc
+[00:02:45]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:45]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:48] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:48] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v72-win32-x64.tar.gz
+[00:02:48] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v72-win32-x64.tar.gz
+[00:02:48] prebuild info build Preparing to prebuild keytar@7.4.0 for node 13.0.0 on win32-x64 using node-gyp
+[00:02:48] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:48] prebuild http GET https://nodejs.org/dist/v13.0.0/node-v13.0.0-headers.tar.gz
+[00:02:48] prebuild http 200 https://nodejs.org/dist/v13.0.0/node-v13.0.0-headers.tar.gz
+[00:02:49] prebuild http GET https://nodejs.org/dist/v13.0.0/SHASUMS256.txt
+[00:02:49] prebuild http GET https://nodejs.org/dist/v13.0.0/win-x86/node.lib
+[00:02:49] prebuild http GET https://nodejs.org/dist/v13.0.0/win-x64/node.lib
+[00:02:49] prebuild http GET https://nodejs.org/dist/v13.0.0/win-arm64/node.lib
+[00:02:49] prebuild http 200 https://nodejs.org/dist/v13.0.0/SHASUMS256.txt
+[00:02:49] prebuild http 404 https://nodejs.org/dist/v13.0.0/win-arm64/node.lib
+[00:02:49] prebuild http 200 https://nodejs.org/dist/v13.0.0/win-x86/node.lib
+[00:02:49] prebuild http 200 https://nodejs.org/dist/v13.0.0/win-x64/node.lib
+[00:02:50] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:02:50] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:02:50] prebuild info find VS run with --verbose for detailed information
+[00:02:50] prebuild info spawn C:\Python27\python.exe
+[00:02:50] prebuild info spawn args [
+[00:02:50] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:02:50] prebuild info spawn args   'binding.gyp',
+[00:02:50] prebuild info spawn args   '-f',
+[00:02:50] prebuild info spawn args   'msvs',
+[00:02:50] prebuild info spawn args   '-I',
+[00:02:50] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:02:50] prebuild info spawn args   '-I',
+[00:02:50] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:02:50] prebuild info spawn args   '-I',
+[00:02:50] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\13.0.0\\include\\node\\common.gypi',
+[00:02:50] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:02:50] prebuild info spawn args   '-Dvisibility=default',
+[00:02:50] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\13.0.0',
+[00:02:50] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:02:50] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\13.0.0\\\\<(target_arch)\\\\node.lib',
+[00:02:50] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:02:50] prebuild info spawn args   '-Dnode_engine=v8',
+[00:02:50] prebuild info spawn args   '--depth=.',
+[00:02:50] prebuild info spawn args   '--no-parallel',
+[00:02:50] prebuild info spawn args   '--generator-output',
+[00:02:50] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:02:50] prebuild info spawn args   '-Goutput_dir=.'
+[00:02:50] prebuild info spawn args ]
+[00:02:50] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:02:50] prebuild info spawn args [
+[00:02:50] prebuild info spawn args   'build/binding.sln',
+[00:02:50] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:02:50] prebuild info spawn args   '/nologo',
+[00:02:50] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:02:50] prebuild info spawn args ]
+[00:02:51] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:02:53]   async.cc
+[00:02:53]   main.cc
+[00:02:53]   keytar_win.cc
+[00:02:54]   win_delay_load_hook.cc
+[00:02:55]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:02:55]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:02:58] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:02:58] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v79-win32-x64.tar.gz
+[00:02:58] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v79-win32-x64.tar.gz
+[00:02:58] prebuild info build Preparing to prebuild keytar@7.4.0 for node 14.0.0 on win32-x64 using node-gyp
+[00:02:58] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:02:58] prebuild http GET https://nodejs.org/dist/v14.0.0/node-v14.0.0-headers.tar.gz
+[00:02:58] prebuild http 200 https://nodejs.org/dist/v14.0.0/node-v14.0.0-headers.tar.gz
+[00:02:59] prebuild http GET https://nodejs.org/dist/v14.0.0/SHASUMS256.txt
+[00:02:59] prebuild http GET https://nodejs.org/dist/v14.0.0/win-arm64/node.lib
+[00:02:59] prebuild http GET https://nodejs.org/dist/v14.0.0/win-x64/node.lib
+[00:02:59] prebuild http GET https://nodejs.org/dist/v14.0.0/win-x86/node.lib
+[00:02:59] prebuild http 200 https://nodejs.org/dist/v14.0.0/SHASUMS256.txt
+[00:02:59] prebuild http 404 https://nodejs.org/dist/v14.0.0/win-arm64/node.lib
+[00:02:59] prebuild http 200 https://nodejs.org/dist/v14.0.0/win-x64/node.lib
+[00:02:59] prebuild http 200 https://nodejs.org/dist/v14.0.0/win-x86/node.lib
+[00:03:00] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:00] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:00] prebuild info find VS run with --verbose for detailed information
+[00:03:00] prebuild info spawn C:\Python27\python.exe
+[00:03:00] prebuild info spawn args [
+[00:03:00] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:00] prebuild info spawn args   'binding.gyp',
+[00:03:00] prebuild info spawn args   '-f',
+[00:03:00] prebuild info spawn args   'msvs',
+[00:03:00] prebuild info spawn args   '-I',
+[00:03:00] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:00] prebuild info spawn args   '-I',
+[00:03:00] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:00] prebuild info spawn args   '-I',
+[00:03:00] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\14.0.0\\include\\node\\common.gypi',
+[00:03:00] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:00] prebuild info spawn args   '-Dvisibility=default',
+[00:03:00] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\14.0.0',
+[00:03:00] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:00] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\14.0.0\\\\<(target_arch)\\\\node.lib',
+[00:03:00] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:00] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:00] prebuild info spawn args   '--depth=.',
+[00:03:00] prebuild info spawn args   '--no-parallel',
+[00:03:00] prebuild info spawn args   '--generator-output',
+[00:03:00] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:00] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:00] prebuild info spawn args ]
+[00:03:00] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:00] prebuild info spawn args [
+[00:03:00] prebuild info spawn args   'build/binding.sln',
+[00:03:00] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:00] prebuild info spawn args   '/nologo',
+[00:03:00] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:03:00] prebuild info spawn args ]
+[00:03:00] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:02]   async.cc
+[00:03:02]   main.cc
+[00:03:03]   keytar_win.cc
+[00:03:03]   win_delay_load_hook.cc
+[00:03:05]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:05]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:08] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:08] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v83-win32-x64.tar.gz
+[00:03:08] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v83-win32-x64.tar.gz
+[00:03:08] prebuild info build Preparing to prebuild keytar@7.4.0 for node 15.0.0 on win32-x64 using node-gyp
+[00:03:08] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:08] prebuild http GET https://nodejs.org/dist/v15.0.0/node-v15.0.0-headers.tar.gz
+[00:03:08] prebuild http 200 https://nodejs.org/dist/v15.0.0/node-v15.0.0-headers.tar.gz
+[00:03:09] prebuild http GET https://nodejs.org/dist/v15.0.0/SHASUMS256.txt
+[00:03:09] prebuild http GET https://nodejs.org/dist/v15.0.0/win-x86/node.lib
+[00:03:09] prebuild http GET https://nodejs.org/dist/v15.0.0/win-x64/node.lib
+[00:03:09] prebuild http GET https://nodejs.org/dist/v15.0.0/win-arm64/node.lib
+[00:03:09] prebuild http 200 https://nodejs.org/dist/v15.0.0/SHASUMS256.txt
+[00:03:09] prebuild http 404 https://nodejs.org/dist/v15.0.0/win-arm64/node.lib
+[00:03:09] prebuild http 200 https://nodejs.org/dist/v15.0.0/win-x64/node.lib
+[00:03:09] prebuild http 200 https://nodejs.org/dist/v15.0.0/win-x86/node.lib
+[00:03:10] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:10] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:10] prebuild info find VS run with --verbose for detailed information
+[00:03:10] prebuild info spawn C:\Python27\python.exe
+[00:03:10] prebuild info spawn args [
+[00:03:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:10] prebuild info spawn args   'binding.gyp',
+[00:03:10] prebuild info spawn args   '-f',
+[00:03:10] prebuild info spawn args   'msvs',
+[00:03:10] prebuild info spawn args   '-I',
+[00:03:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:10] prebuild info spawn args   '-I',
+[00:03:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:10] prebuild info spawn args   '-I',
+[00:03:10] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\15.0.0\\include\\node\\common.gypi',
+[00:03:10] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:10] prebuild info spawn args   '-Dvisibility=default',
+[00:03:10] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\15.0.0',
+[00:03:10] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:10] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\15.0.0\\\\<(target_arch)\\\\node.lib',
+[00:03:10] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:10] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:10] prebuild info spawn args   '--depth=.',
+[00:03:10] prebuild info spawn args   '--no-parallel',
+[00:03:10] prebuild info spawn args   '--generator-output',
+[00:03:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:10] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:10] prebuild info spawn args ]
+[00:03:10] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:10] prebuild info spawn args [
+[00:03:10] prebuild info spawn args   'build/binding.sln',
+[00:03:10] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:10] prebuild info spawn args   '/nologo',
+[00:03:10] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:03:10] prebuild info spawn args ]
+[00:03:10] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:12]   async.cc
+[00:03:12]   main.cc
+[00:03:13]   keytar_win.cc
+[00:03:13]   win_delay_load_hook.cc
+[00:03:14]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:15]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:18] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:18] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v88-win32-x64.tar.gz
+[00:03:18] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v88-win32-x64.tar.gz
+[00:03:18] npm run prebuild-node-ia32
+[00:03:19] 
+[00:03:19] > keytar@7.4.0 prebuild-node-ia32
+[00:03:19] > prebuild -t 8.9.0 -t 9.4.0 -a ia32 --strip
+[00:03:19] 
+[00:03:19] prebuild info begin Prebuild version 10.0.1
+[00:03:19] prebuild info build Preparing to prebuild keytar@7.4.0 for node 8.9.0 on win32-ia32 using node-gyp
+[00:03:19] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:20] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:20] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:20] prebuild info find VS run with --verbose for detailed information
+[00:03:20] prebuild info spawn C:\Python27\python.exe
+[00:03:20] prebuild info spawn args [
+[00:03:20] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:20] prebuild info spawn args   'binding.gyp',
+[00:03:20] prebuild info spawn args   '-f',
+[00:03:20] prebuild info spawn args   'msvs',
+[00:03:20] prebuild info spawn args   '-I',
+[00:03:20] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:20] prebuild info spawn args   '-I',
+[00:03:20] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:20] prebuild info spawn args   '-I',
+[00:03:20] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\8.9.0\\include\\node\\common.gypi',
+[00:03:20] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:20] prebuild info spawn args   '-Dvisibility=default',
+[00:03:20] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\8.9.0',
+[00:03:20] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:20] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\8.9.0\\\\<(target_arch)\\\\node.lib',
+[00:03:20] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:20] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:20] prebuild info spawn args   '--depth=.',
+[00:03:20] prebuild info spawn args   '--no-parallel',
+[00:03:20] prebuild info spawn args   '--generator-output',
+[00:03:20] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:20] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:20] prebuild info spawn args ]
+[00:03:20] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:20] prebuild info spawn args [
+[00:03:20] prebuild info spawn args   'build/binding.sln',
+[00:03:20] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:20] prebuild info spawn args   '/nologo',
+[00:03:20] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:03:20] prebuild info spawn args ]
+[00:03:21] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:23]   async.cc
+[00:03:23]   main.cc
+[00:03:23]   keytar_win.cc
+[00:03:23]   win_delay_load_hook.cc
+[00:03:25]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:25]   Generating code
+[00:03:25]   Finished generating code
+[00:03:26]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:29] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:29] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v57-win32-ia32.tar.gz
+[00:03:29] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v57-win32-ia32.tar.gz
+[00:03:29] prebuild info build Preparing to prebuild keytar@7.4.0 for node 9.4.0 on win32-ia32 using node-gyp
+[00:03:29] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:29] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:29] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:29] prebuild info find VS run with --verbose for detailed information
+[00:03:29] prebuild info spawn C:\Python27\python.exe
+[00:03:29] prebuild info spawn args [
+[00:03:29] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:29] prebuild info spawn args   'binding.gyp',
+[00:03:29] prebuild info spawn args   '-f',
+[00:03:29] prebuild info spawn args   'msvs',
+[00:03:29] prebuild info spawn args   '-I',
+[00:03:29] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:29] prebuild info spawn args   '-I',
+[00:03:29] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:29] prebuild info spawn args   '-I',
+[00:03:29] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\9.4.0\\include\\node\\common.gypi',
+[00:03:29] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:29] prebuild info spawn args   '-Dvisibility=default',
+[00:03:29] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\node\\9.4.0',
+[00:03:29] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:29] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\node\\\\9.4.0\\\\<(target_arch)\\\\node.lib',
+[00:03:29] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:29] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:29] prebuild info spawn args   '--depth=.',
+[00:03:29] prebuild info spawn args   '--no-parallel',
+[00:03:29] prebuild info spawn args   '--generator-output',
+[00:03:29] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:29] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:29] prebuild info spawn args ]
+[00:03:29] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:29] prebuild info spawn args [
+[00:03:29] prebuild info spawn args   'build/binding.sln',
+[00:03:29] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:29] prebuild info spawn args   '/nologo',
+[00:03:29] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:03:29] prebuild info spawn args ]
+[00:03:30] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:32]   async.cc
+[00:03:32]   main.cc
+[00:03:32]   keytar_win.cc
+[00:03:32]   win_delay_load_hook.cc
+[00:03:34]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:34]   Generating code
+[00:03:34]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:03:34]   Finished generating code
+[00:03:35]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:37] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:37] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-node-v59-win32-ia32.tar.gz
+[00:03:37] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-node-v59-win32-ia32.tar.gz
+[00:03:37] npm run prebuild-electron
+[00:03:38] 
+[00:03:38] > keytar@7.4.0 prebuild-electron
+[00:03:38] > prebuild -t 7.0.0 -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -r electron --strip
+[00:03:38] 
+[00:03:39] prebuild info begin Prebuild version 10.0.1
+[00:03:39] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 7.0.0 on win32-x64 using node-gyp
+[00:03:39] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:39] prebuild http GET https://atom.io/download/electron/v7.0.0/node-v7.0.0-headers.tar.gz
+[00:03:39] prebuild http 200 https://atom.io/download/electron/v7.0.0/node-v7.0.0-headers.tar.gz
+[00:03:40] prebuild http GET https://atom.io/download/electron/v7.0.0/SHASUMS256.txt
+[00:03:40] prebuild http GET https://atom.io/download/electron/v7.0.0/win-x86/node.lib
+[00:03:40] prebuild http GET https://atom.io/download/electron/v7.0.0/win-x64/node.lib
+[00:03:40] prebuild http GET https://atom.io/download/electron/v7.0.0/win-arm64/node.lib
+[00:03:40] prebuild http 200 https://atom.io/download/electron/v7.0.0/SHASUMS256.txt
+[00:03:40] prebuild http 200 https://atom.io/download/electron/v7.0.0/win-x86/node.lib
+[00:03:40] prebuild http 200 https://atom.io/download/electron/v7.0.0/win-arm64/node.lib
+[00:03:40] prebuild http 200 https://atom.io/download/electron/v7.0.0/win-x64/node.lib
+[00:03:40] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:40] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:40] prebuild info find VS run with --verbose for detailed information
+[00:03:40] prebuild info spawn C:\Python27\python.exe
+[00:03:40] prebuild info spawn args [
+[00:03:40] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:40] prebuild info spawn args   'binding.gyp',
+[00:03:40] prebuild info spawn args   '-f',
+[00:03:40] prebuild info spawn args   'msvs',
+[00:03:40] prebuild info spawn args   '-I',
+[00:03:40] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:40] prebuild info spawn args   '-I',
+[00:03:40] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:40] prebuild info spawn args   '-I',
+[00:03:40] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0\\include\\node\\common.gypi',
+[00:03:40] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:40] prebuild info spawn args   '-Dvisibility=default',
+[00:03:40] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0',
+[00:03:40] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:40] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\7.0.0\\\\<(target_arch)\\\\node.lib',
+[00:03:40] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:40] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:40] prebuild info spawn args   '--depth=.',
+[00:03:40] prebuild info spawn args   '--no-parallel',
+[00:03:40] prebuild info spawn args   '--generator-output',
+[00:03:40] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:40] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:40] prebuild info spawn args ]
+[00:03:41] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:41] prebuild info spawn args [
+[00:03:41] prebuild info spawn args   'build/binding.sln',
+[00:03:41] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:41] prebuild info spawn args   '/nologo',
+[00:03:41] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:03:41] prebuild info spawn args ]
+[00:03:41] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:43]   async.cc
+[00:03:44]   main.cc
+[00:03:44]   keytar_win.cc
+[00:03:44]   win_delay_load_hook.cc
+[00:03:45]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:46]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:49] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:49] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v75-win32-x64.tar.gz
+[00:03:49] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v75-win32-x64.tar.gz
+[00:03:49] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 8.0.0 on win32-x64 using node-gyp
+[00:03:49] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:49] prebuild http GET https://atom.io/download/electron/v8.0.0/node-v8.0.0-headers.tar.gz
+[00:03:49] prebuild http 200 https://atom.io/download/electron/v8.0.0/node-v8.0.0-headers.tar.gz
+[00:03:49] prebuild http GET https://atom.io/download/electron/v8.0.0/SHASUMS256.txt
+[00:03:49] prebuild http GET https://atom.io/download/electron/v8.0.0/win-x64/node.lib
+[00:03:49] prebuild http GET https://atom.io/download/electron/v8.0.0/win-x86/node.lib
+[00:03:49] prebuild http GET https://atom.io/download/electron/v8.0.0/win-arm64/node.lib
+[00:03:50] prebuild http 200 https://atom.io/download/electron/v8.0.0/SHASUMS256.txt
+[00:03:50] prebuild http 200 https://atom.io/download/electron/v8.0.0/win-x86/node.lib
+[00:03:50] prebuild http 200 https://atom.io/download/electron/v8.0.0/win-arm64/node.lib
+[00:03:50] prebuild http 200 https://atom.io/download/electron/v8.0.0/win-x64/node.lib
+[00:03:50] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:03:50] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:03:50] prebuild info find VS run with --verbose for detailed information
+[00:03:50] prebuild info spawn C:\Python27\python.exe
+[00:03:50] prebuild info spawn args [
+[00:03:50] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:03:50] prebuild info spawn args   'binding.gyp',
+[00:03:50] prebuild info spawn args   '-f',
+[00:03:50] prebuild info spawn args   'msvs',
+[00:03:50] prebuild info spawn args   '-I',
+[00:03:50] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:03:50] prebuild info spawn args   '-I',
+[00:03:50] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:03:50] prebuild info spawn args   '-I',
+[00:03:50] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0\\include\\node\\common.gypi',
+[00:03:50] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:03:50] prebuild info spawn args   '-Dvisibility=default',
+[00:03:50] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0',
+[00:03:50] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:03:50] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\8.0.0\\\\<(target_arch)\\\\node.lib',
+[00:03:50] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:03:50] prebuild info spawn args   '-Dnode_engine=v8',
+[00:03:50] prebuild info spawn args   '--depth=.',
+[00:03:50] prebuild info spawn args   '--no-parallel',
+[00:03:50] prebuild info spawn args   '--generator-output',
+[00:03:50] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:03:50] prebuild info spawn args   '-Goutput_dir=.'
+[00:03:50] prebuild info spawn args ]
+[00:03:50] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:03:50] prebuild info spawn args [
+[00:03:50] prebuild info spawn args   'build/binding.sln',
+[00:03:50] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:03:50] prebuild info spawn args   '/nologo',
+[00:03:50] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:03:50] prebuild info spawn args ]
+[00:03:51] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:03:53]   async.cc
+[00:03:53]   main.cc
+[00:03:53]   keytar_win.cc
+[00:03:53]   win_delay_load_hook.cc
+[00:03:54]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:03:54]   Generating code
+[00:03:55]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:03:55]   Finished generating code
+[00:03:55]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:03:58] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:03:58] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v76-win32-x64.tar.gz
+[00:03:58] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v76-win32-x64.tar.gz
+[00:03:58] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 9.0.0 on win32-x64 using node-gyp
+[00:03:58] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:03:58] prebuild http GET https://atom.io/download/electron/v9.0.0/node-v9.0.0-headers.tar.gz
+[00:03:59] prebuild http 200 https://atom.io/download/electron/v9.0.0/node-v9.0.0-headers.tar.gz
+[00:03:59] prebuild http GET https://atom.io/download/electron/v9.0.0/SHASUMS256.txt
+[00:03:59] prebuild http GET https://atom.io/download/electron/v9.0.0/win-x86/node.lib
+[00:03:59] prebuild http GET https://atom.io/download/electron/v9.0.0/win-x64/node.lib
+[00:03:59] prebuild http GET https://atom.io/download/electron/v9.0.0/win-arm64/node.lib
+[00:03:59] prebuild http 200 https://atom.io/download/electron/v9.0.0/SHASUMS256.txt
+[00:03:59] prebuild http 200 https://atom.io/download/electron/v9.0.0/win-arm64/node.lib
+[00:03:59] prebuild http 200 https://atom.io/download/electron/v9.0.0/win-x86/node.lib
+[00:03:59] prebuild http 200 https://atom.io/download/electron/v9.0.0/win-x64/node.lib
+[00:04:00] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:00] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:00] prebuild info find VS run with --verbose for detailed information
+[00:04:00] prebuild info spawn C:\Python27\python.exe
+[00:04:00] prebuild info spawn args [
+[00:04:00] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:00] prebuild info spawn args   'binding.gyp',
+[00:04:00] prebuild info spawn args   '-f',
+[00:04:00] prebuild info spawn args   'msvs',
+[00:04:00] prebuild info spawn args   '-I',
+[00:04:00] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:00] prebuild info spawn args   '-I',
+[00:04:00] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:00] prebuild info spawn args   '-I',
+[00:04:00] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0\\include\\node\\common.gypi',
+[00:04:00] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:00] prebuild info spawn args   '-Dvisibility=default',
+[00:04:00] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0',
+[00:04:00] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:00] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\9.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:00] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:00] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:00] prebuild info spawn args   '--depth=.',
+[00:04:00] prebuild info spawn args   '--no-parallel',
+[00:04:00] prebuild info spawn args   '--generator-output',
+[00:04:00] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:00] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:00] prebuild info spawn args ]
+[00:04:00] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:00] prebuild info spawn args [
+[00:04:00] prebuild info spawn args   'build/binding.sln',
+[00:04:00] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:00] prebuild info spawn args   '/nologo',
+[00:04:00] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:04:00] prebuild info spawn args ]
+[00:04:00] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:03]   async.cc
+[00:04:03]   main.cc
+[00:04:03]   keytar_win.cc
+[00:04:03]   win_delay_load_hook.cc
+[00:04:04]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:04]   Generating code
+[00:04:05]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:04:05]   Finished generating code
+[00:04:05]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:08] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:08] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v80-win32-x64.tar.gz
+[00:04:08] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v80-win32-x64.tar.gz
+[00:04:08] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 10.0.0 on win32-x64 using node-gyp
+[00:04:08] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:08] prebuild http GET https://atom.io/download/electron/v10.0.0/node-v10.0.0-headers.tar.gz
+[00:04:08] prebuild http 200 https://atom.io/download/electron/v10.0.0/node-v10.0.0-headers.tar.gz
+[00:04:08] prebuild http GET https://atom.io/download/electron/v10.0.0/SHASUMS256.txt
+[00:04:08] prebuild http GET https://atom.io/download/electron/v10.0.0/win-x86/node.lib
+[00:04:08] prebuild http GET https://atom.io/download/electron/v10.0.0/win-x64/node.lib
+[00:04:08] prebuild http GET https://atom.io/download/electron/v10.0.0/win-arm64/node.lib
+[00:04:09] prebuild http 200 https://atom.io/download/electron/v10.0.0/win-x64/node.lib
+[00:04:09] prebuild http 200 https://atom.io/download/electron/v10.0.0/SHASUMS256.txt
+[00:04:09] prebuild http 200 https://atom.io/download/electron/v10.0.0/win-arm64/node.lib
+[00:04:09] prebuild http 200 https://atom.io/download/electron/v10.0.0/win-x86/node.lib
+[00:04:09] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:09] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:09] prebuild info find VS run with --verbose for detailed information
+[00:04:09] prebuild info spawn C:\Python27\python.exe
+[00:04:09] prebuild info spawn args [
+[00:04:09] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:09] prebuild info spawn args   'binding.gyp',
+[00:04:09] prebuild info spawn args   '-f',
+[00:04:09] prebuild info spawn args   'msvs',
+[00:04:09] prebuild info spawn args   '-I',
+[00:04:09] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:09] prebuild info spawn args   '-I',
+[00:04:09] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:09] prebuild info spawn args   '-I',
+[00:04:09] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0\\include\\node\\common.gypi',
+[00:04:09] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:09] prebuild info spawn args   '-Dvisibility=default',
+[00:04:09] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0',
+[00:04:09] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:09] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\10.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:09] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:09] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:09] prebuild info spawn args   '--depth=.',
+[00:04:09] prebuild info spawn args   '--no-parallel',
+[00:04:09] prebuild info spawn args   '--generator-output',
+[00:04:09] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:09] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:09] prebuild info spawn args ]
+[00:04:10] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:10] prebuild info spawn args [
+[00:04:10] prebuild info spawn args   'build/binding.sln',
+[00:04:10] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:10] prebuild info spawn args   '/nologo',
+[00:04:10] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:04:10] prebuild info spawn args ]
+[00:04:10] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:12]   async.cc
+[00:04:12]   main.cc
+[00:04:13]   keytar_win.cc
+[00:04:13]   win_delay_load_hook.cc
+[00:04:14]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:14]   Generating code
+[00:04:14]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:04:14]   Finished generating code
+[00:04:15]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:18] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:18] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v82-win32-x64.tar.gz
+[00:04:18] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v82-win32-x64.tar.gz
+[00:04:18] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 11.0.0 on win32-x64 using node-gyp
+[00:04:18] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:18] prebuild http GET https://atom.io/download/electron/v11.0.0/node-v11.0.0-headers.tar.gz
+[00:04:18] prebuild http 200 https://atom.io/download/electron/v11.0.0/node-v11.0.0-headers.tar.gz
+[00:04:18] prebuild http GET https://atom.io/download/electron/v11.0.0/SHASUMS256.txt
+[00:04:18] prebuild http GET https://atom.io/download/electron/v11.0.0/win-x64/node.lib
+[00:04:18] prebuild http GET https://atom.io/download/electron/v11.0.0/win-x86/node.lib
+[00:04:18] prebuild http GET https://atom.io/download/electron/v11.0.0/win-arm64/node.lib
+[00:04:18] prebuild http 200 https://atom.io/download/electron/v11.0.0/SHASUMS256.txt
+[00:04:18] prebuild http 200 https://atom.io/download/electron/v11.0.0/win-x86/node.lib
+[00:04:18] prebuild http 200 https://atom.io/download/electron/v11.0.0/win-x64/node.lib
+[00:04:18] prebuild http 200 https://atom.io/download/electron/v11.0.0/win-arm64/node.lib
+[00:04:19] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:19] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:19] prebuild info find VS run with --verbose for detailed information
+[00:04:19] prebuild info spawn C:\Python27\python.exe
+[00:04:19] prebuild info spawn args [
+[00:04:19] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:19] prebuild info spawn args   'binding.gyp',
+[00:04:19] prebuild info spawn args   '-f',
+[00:04:19] prebuild info spawn args   'msvs',
+[00:04:19] prebuild info spawn args   '-I',
+[00:04:19] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:19] prebuild info spawn args   '-I',
+[00:04:19] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:19] prebuild info spawn args   '-I',
+[00:04:19] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0\\include\\node\\common.gypi',
+[00:04:19] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:19] prebuild info spawn args   '-Dvisibility=default',
+[00:04:19] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0',
+[00:04:19] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:19] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\11.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:19] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:19] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:19] prebuild info spawn args   '--depth=.',
+[00:04:19] prebuild info spawn args   '--no-parallel',
+[00:04:19] prebuild info spawn args   '--generator-output',
+[00:04:19] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:19] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:19] prebuild info spawn args ]
+[00:04:19] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:19] prebuild info spawn args [
+[00:04:19] prebuild info spawn args   'build/binding.sln',
+[00:04:19] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:19] prebuild info spawn args   '/nologo',
+[00:04:19] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:04:19] prebuild info spawn args ]
+[00:04:20] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:22]   async.cc
+[00:04:22]   main.cc
+[00:04:22]   keytar_win.cc
+[00:04:22]   win_delay_load_hook.cc
+[00:04:23]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:23]   Generating code
+[00:04:24]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:04:24]   Finished generating code
+[00:04:24]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:27] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:27] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v85-win32-x64.tar.gz
+[00:04:27] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v85-win32-x64.tar.gz
+[00:04:27] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 12.0.0 on win32-x64 using node-gyp
+[00:04:27] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:27] prebuild http GET https://atom.io/download/electron/v12.0.0/node-v12.0.0-headers.tar.gz
+[00:04:28] prebuild http 200 https://atom.io/download/electron/v12.0.0/node-v12.0.0-headers.tar.gz
+[00:04:28] prebuild http GET https://atom.io/download/electron/v12.0.0/SHASUMS256.txt
+[00:04:28] prebuild http GET https://atom.io/download/electron/v12.0.0/win-x86/node.lib
+[00:04:28] prebuild http GET https://atom.io/download/electron/v12.0.0/win-x64/node.lib
+[00:04:28] prebuild http GET https://atom.io/download/electron/v12.0.0/win-arm64/node.lib
+[00:04:28] prebuild http 200 https://atom.io/download/electron/v12.0.0/SHASUMS256.txt
+[00:04:28] prebuild http 200 https://atom.io/download/electron/v12.0.0/win-x86/node.lib
+[00:04:28] prebuild http 200 https://atom.io/download/electron/v12.0.0/win-arm64/node.lib
+[00:04:28] prebuild http 200 https://atom.io/download/electron/v12.0.0/win-x64/node.lib
+[00:04:29] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:29] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:29] prebuild info find VS run with --verbose for detailed information
+[00:04:29] prebuild info spawn C:\Python27\python.exe
+[00:04:29] prebuild info spawn args [
+[00:04:29] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:29] prebuild info spawn args   'binding.gyp',
+[00:04:29] prebuild info spawn args   '-f',
+[00:04:29] prebuild info spawn args   'msvs',
+[00:04:29] prebuild info spawn args   '-I',
+[00:04:29] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:29] prebuild info spawn args   '-I',
+[00:04:29] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:29] prebuild info spawn args   '-I',
+[00:04:29] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0\\include\\node\\common.gypi',
+[00:04:29] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:29] prebuild info spawn args   '-Dvisibility=default',
+[00:04:29] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0',
+[00:04:29] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:29] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\12.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:29] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:29] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:29] prebuild info spawn args   '--depth=.',
+[00:04:29] prebuild info spawn args   '--no-parallel',
+[00:04:29] prebuild info spawn args   '--generator-output',
+[00:04:29] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:29] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:29] prebuild info spawn args ]
+[00:04:29] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:29] prebuild info spawn args [
+[00:04:29] prebuild info spawn args   'build/binding.sln',
+[00:04:29] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:29] prebuild info spawn args   '/nologo',
+[00:04:29] prebuild info spawn args   '/p:Configuration=Release;Platform=x64'
+[00:04:29] prebuild info spawn args ]
+[00:04:30] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:32]   async.cc
+[00:04:32]   main.cc
+[00:04:32]   keytar_win.cc
+[00:04:32]   win_delay_load_hook.cc
+[00:04:33]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:33]   Generating code
+[00:04:34]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:04:34]   Finished generating code
+[00:04:34]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:37] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:37] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v87-win32-x64.tar.gz
+[00:04:37] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v87-win32-x64.tar.gz
+[00:04:37] npm run prebuild-electron-ia32
+[00:04:38] 
+[00:04:38] > keytar@7.4.0 prebuild-electron-ia32
+[00:04:38] > prebuild -t 7.0.0 -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -r electron -a ia32 --strip
+[00:04:38] 
+[00:04:39] prebuild info begin Prebuild version 10.0.1
+[00:04:39] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 7.0.0 on win32-ia32 using node-gyp
+[00:04:39] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:39] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:39] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:39] prebuild info find VS run with --verbose for detailed information
+[00:04:39] prebuild info spawn C:\Python27\python.exe
+[00:04:39] prebuild info spawn args [
+[00:04:39] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:39] prebuild info spawn args   'binding.gyp',
+[00:04:39] prebuild info spawn args   '-f',
+[00:04:39] prebuild info spawn args   'msvs',
+[00:04:39] prebuild info spawn args   '-I',
+[00:04:39] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:39] prebuild info spawn args   '-I',
+[00:04:39] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:39] prebuild info spawn args   '-I',
+[00:04:39] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0\\include\\node\\common.gypi',
+[00:04:39] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:39] prebuild info spawn args   '-Dvisibility=default',
+[00:04:39] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0',
+[00:04:39] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:39] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\7.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:39] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:39] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:39] prebuild info spawn args   '--depth=.',
+[00:04:39] prebuild info spawn args   '--no-parallel',
+[00:04:39] prebuild info spawn args   '--generator-output',
+[00:04:39] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:39] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:39] prebuild info spawn args ]
+[00:04:40] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:40] prebuild info spawn args [
+[00:04:40] prebuild info spawn args   'build/binding.sln',
+[00:04:40] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:40] prebuild info spawn args   '/nologo',
+[00:04:40] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:04:40] prebuild info spawn args ]
+[00:04:40] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:42]   async.cc
+[00:04:42]   main.cc
+[00:04:43]   keytar_win.cc
+[00:04:43]   win_delay_load_hook.cc
+[00:04:44]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:45]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:48] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:48] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v75-win32-ia32.tar.gz
+[00:04:48] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v75-win32-ia32.tar.gz
+[00:04:48] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 8.0.0 on win32-ia32 using node-gyp
+[00:04:48] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:48] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:48] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:48] prebuild info find VS run with --verbose for detailed information
+[00:04:48] prebuild info spawn C:\Python27\python.exe
+[00:04:48] prebuild info spawn args [
+[00:04:48] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:48] prebuild info spawn args   'binding.gyp',
+[00:04:48] prebuild info spawn args   '-f',
+[00:04:48] prebuild info spawn args   'msvs',
+[00:04:48] prebuild info spawn args   '-I',
+[00:04:48] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:48] prebuild info spawn args   '-I',
+[00:04:48] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:48] prebuild info spawn args   '-I',
+[00:04:48] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0\\include\\node\\common.gypi',
+[00:04:48] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:48] prebuild info spawn args   '-Dvisibility=default',
+[00:04:48] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0',
+[00:04:48] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:48] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\8.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:48] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:48] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:48] prebuild info spawn args   '--depth=.',
+[00:04:48] prebuild info spawn args   '--no-parallel',
+[00:04:48] prebuild info spawn args   '--generator-output',
+[00:04:48] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:48] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:48] prebuild info spawn args ]
+[00:04:48] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:48] prebuild info spawn args [
+[00:04:48] prebuild info spawn args   'build/binding.sln',
+[00:04:48] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:48] prebuild info spawn args   '/nologo',
+[00:04:48] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:04:48] prebuild info spawn args ]
+[00:04:49] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:04:51]   async.cc
+[00:04:51]   main.cc
+[00:04:51]   keytar_win.cc
+[00:04:52]   win_delay_load_hook.cc
+[00:04:53]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:04:53]   Generating code
+[00:04:53]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:04:53]   Finished generating code
+[00:04:53]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:04:56] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:04:56] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v76-win32-ia32.tar.gz
+[00:04:56] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v76-win32-ia32.tar.gz
+[00:04:56] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 9.0.0 on win32-ia32 using node-gyp
+[00:04:56] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:04:57] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:04:57] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:04:57] prebuild info find VS run with --verbose for detailed information
+[00:04:57] prebuild info spawn C:\Python27\python.exe
+[00:04:57] prebuild info spawn args [
+[00:04:57] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:04:57] prebuild info spawn args   'binding.gyp',
+[00:04:57] prebuild info spawn args   '-f',
+[00:04:57] prebuild info spawn args   'msvs',
+[00:04:57] prebuild info spawn args   '-I',
+[00:04:57] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:04:57] prebuild info spawn args   '-I',
+[00:04:57] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:04:57] prebuild info spawn args   '-I',
+[00:04:57] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0\\include\\node\\common.gypi',
+[00:04:57] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:04:57] prebuild info spawn args   '-Dvisibility=default',
+[00:04:57] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0',
+[00:04:57] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:04:57] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\9.0.0\\\\<(target_arch)\\\\node.lib',
+[00:04:57] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:04:57] prebuild info spawn args   '-Dnode_engine=v8',
+[00:04:57] prebuild info spawn args   '--depth=.',
+[00:04:57] prebuild info spawn args   '--no-parallel',
+[00:04:57] prebuild info spawn args   '--generator-output',
+[00:04:57] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:04:57] prebuild info spawn args   '-Goutput_dir=.'
+[00:04:57] prebuild info spawn args ]
+[00:04:57] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:04:57] prebuild info spawn args [
+[00:04:57] prebuild info spawn args   'build/binding.sln',
+[00:04:57] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:04:57] prebuild info spawn args   '/nologo',
+[00:04:57] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:04:57] prebuild info spawn args ]
+[00:04:58] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:00]   async.cc
+[00:05:00]   main.cc
+[00:05:00]   keytar_win.cc
+[00:05:00]   win_delay_load_hook.cc
+[00:05:01]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:01]   Generating code
+[00:05:02]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:02]   Finished generating code
+[00:05:02]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:05] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:05] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v80-win32-ia32.tar.gz
+[00:05:05] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v80-win32-ia32.tar.gz
+[00:05:05] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 10.0.0 on win32-ia32 using node-gyp
+[00:05:05] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:06] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:06] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:06] prebuild info find VS run with --verbose for detailed information
+[00:05:06] prebuild info spawn C:\Python27\python.exe
+[00:05:06] prebuild info spawn args [
+[00:05:06] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:06] prebuild info spawn args   'binding.gyp',
+[00:05:06] prebuild info spawn args   '-f',
+[00:05:06] prebuild info spawn args   'msvs',
+[00:05:06] prebuild info spawn args   '-I',
+[00:05:06] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:06] prebuild info spawn args   '-I',
+[00:05:06] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:06] prebuild info spawn args   '-I',
+[00:05:06] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0\\include\\node\\common.gypi',
+[00:05:06] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:06] prebuild info spawn args   '-Dvisibility=default',
+[00:05:06] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0',
+[00:05:06] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:06] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\10.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:06] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:06] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:06] prebuild info spawn args   '--depth=.',
+[00:05:06] prebuild info spawn args   '--no-parallel',
+[00:05:06] prebuild info spawn args   '--generator-output',
+[00:05:06] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:06] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:06] prebuild info spawn args ]
+[00:05:06] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:06] prebuild info spawn args [
+[00:05:06] prebuild info spawn args   'build/binding.sln',
+[00:05:06] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:06] prebuild info spawn args   '/nologo',
+[00:05:06] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:05:06] prebuild info spawn args ]
+[00:05:06] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:08]   async.cc
+[00:05:09]   main.cc
+[00:05:09]   keytar_win.cc
+[00:05:09]   win_delay_load_hook.cc
+[00:05:10]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:10]   Generating code
+[00:05:10]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:10]   Finished generating code
+[00:05:11]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:14] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:14] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v82-win32-ia32.tar.gz
+[00:05:14] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v82-win32-ia32.tar.gz
+[00:05:14] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 11.0.0 on win32-ia32 using node-gyp
+[00:05:14] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:14] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:14] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:14] prebuild info find VS run with --verbose for detailed information
+[00:05:14] prebuild info spawn C:\Python27\python.exe
+[00:05:14] prebuild info spawn args [
+[00:05:14] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:14] prebuild info spawn args   'binding.gyp',
+[00:05:14] prebuild info spawn args   '-f',
+[00:05:14] prebuild info spawn args   'msvs',
+[00:05:14] prebuild info spawn args   '-I',
+[00:05:14] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:14] prebuild info spawn args   '-I',
+[00:05:14] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:14] prebuild info spawn args   '-I',
+[00:05:14] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0\\include\\node\\common.gypi',
+[00:05:14] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:14] prebuild info spawn args   '-Dvisibility=default',
+[00:05:14] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0',
+[00:05:14] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:14] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\11.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:14] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:14] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:14] prebuild info spawn args   '--depth=.',
+[00:05:14] prebuild info spawn args   '--no-parallel',
+[00:05:14] prebuild info spawn args   '--generator-output',
+[00:05:14] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:14] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:14] prebuild info spawn args ]
+[00:05:15] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:15] prebuild info spawn args [
+[00:05:15] prebuild info spawn args   'build/binding.sln',
+[00:05:15] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:15] prebuild info spawn args   '/nologo',
+[00:05:15] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:05:15] prebuild info spawn args ]
+[00:05:15] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:17]   async.cc
+[00:05:17]   main.cc
+[00:05:18]   keytar_win.cc
+[00:05:18]   win_delay_load_hook.cc
+[00:05:19]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:19]   Generating code
+[00:05:19]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:19]   Finished generating code
+[00:05:20]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:23] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:23] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v85-win32-ia32.tar.gz
+[00:05:23] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v85-win32-ia32.tar.gz
+[00:05:23] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 12.0.0 on win32-ia32 using node-gyp
+[00:05:23] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:23] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:23] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:23] prebuild info find VS run with --verbose for detailed information
+[00:05:23] prebuild info spawn C:\Python27\python.exe
+[00:05:23] prebuild info spawn args [
+[00:05:23] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:23] prebuild info spawn args   'binding.gyp',
+[00:05:23] prebuild info spawn args   '-f',
+[00:05:23] prebuild info spawn args   'msvs',
+[00:05:23] prebuild info spawn args   '-I',
+[00:05:23] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:23] prebuild info spawn args   '-I',
+[00:05:23] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:23] prebuild info spawn args   '-I',
+[00:05:23] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0\\include\\node\\common.gypi',
+[00:05:23] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:23] prebuild info spawn args   '-Dvisibility=default',
+[00:05:23] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0',
+[00:05:23] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:23] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\12.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:23] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:23] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:23] prebuild info spawn args   '--depth=.',
+[00:05:23] prebuild info spawn args   '--no-parallel',
+[00:05:23] prebuild info spawn args   '--generator-output',
+[00:05:23] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:23] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:23] prebuild info spawn args ]
+[00:05:23] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:23] prebuild info spawn args [
+[00:05:23] prebuild info spawn args   'build/binding.sln',
+[00:05:23] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:23] prebuild info spawn args   '/nologo',
+[00:05:23] prebuild info spawn args   '/p:Configuration=Release;Platform=Win32'
+[00:05:23] prebuild info spawn args ]
+[00:05:24] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:26]   async.cc
+[00:05:26]   main.cc
+[00:05:26]   keytar_win.cc
+[00:05:26]   win_delay_load_hook.cc
+[00:05:28]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:28]   Generating code
+[00:05:28]   All 409 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:28]   Finished generating code
+[00:05:28]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:31] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:31] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v87-win32-ia32.tar.gz
+[00:05:31] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v87-win32-ia32.tar.gz
+[00:05:31] npm run prebuild-electron-arm64
+[00:05:32] 
+[00:05:32] > keytar@7.4.0 prebuild-electron-arm64
+[00:05:32] > prebuild -t 7.0.0 -t 8.0.0 -t 9.0.0 -t 10.0.0 -t 11.0.0 -t 12.0.0 -r electron -a arm64 --strip
+[00:05:32] 
+[00:05:33] prebuild info begin Prebuild version 10.0.1
+[00:05:33] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 7.0.0 on win32-arm64 using node-gyp
+[00:05:33] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:33] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:33] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:33] prebuild info find VS run with --verbose for detailed information
+[00:05:33] prebuild info spawn C:\Python27\python.exe
+[00:05:33] prebuild info spawn args [
+[00:05:33] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:33] prebuild info spawn args   'binding.gyp',
+[00:05:33] prebuild info spawn args   '-f',
+[00:05:33] prebuild info spawn args   'msvs',
+[00:05:33] prebuild info spawn args   '-I',
+[00:05:33] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:33] prebuild info spawn args   '-I',
+[00:05:33] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:33] prebuild info spawn args   '-I',
+[00:05:33] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0\\include\\node\\common.gypi',
+[00:05:33] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:33] prebuild info spawn args   '-Dvisibility=default',
+[00:05:33] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\7.0.0',
+[00:05:33] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:33] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\7.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:33] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:33] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:33] prebuild info spawn args   '--depth=.',
+[00:05:33] prebuild info spawn args   '--no-parallel',
+[00:05:33] prebuild info spawn args   '--generator-output',
+[00:05:33] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:33] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:33] prebuild info spawn args ]
+[00:05:34] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:34] prebuild info spawn args [
+[00:05:34] prebuild info spawn args   'build/binding.sln',
+[00:05:34] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:34] prebuild info spawn args   '/nologo',
+[00:05:34] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:05:34] prebuild info spawn args ]
+[00:05:34] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:36]   async.cc
+[00:05:36]   main.cc
+[00:05:37]   keytar_win.cc
+[00:05:37]   win_delay_load_hook.cc
+[00:05:39]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:39]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:42] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:42] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v75-win32-arm64.tar.gz
+[00:05:43] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v75-win32-arm64.tar.gz
+[00:05:43] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 8.0.0 on win32-arm64 using node-gyp
+[00:05:43] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:43] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:43] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:43] prebuild info find VS run with --verbose for detailed information
+[00:05:43] prebuild info spawn C:\Python27\python.exe
+[00:05:43] prebuild info spawn args [
+[00:05:43] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:43] prebuild info spawn args   'binding.gyp',
+[00:05:43] prebuild info spawn args   '-f',
+[00:05:43] prebuild info spawn args   'msvs',
+[00:05:43] prebuild info spawn args   '-I',
+[00:05:43] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:43] prebuild info spawn args   '-I',
+[00:05:43] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:43] prebuild info spawn args   '-I',
+[00:05:43] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0\\include\\node\\common.gypi',
+[00:05:43] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:43] prebuild info spawn args   '-Dvisibility=default',
+[00:05:43] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\8.0.0',
+[00:05:43] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:43] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\8.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:43] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:43] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:43] prebuild info spawn args   '--depth=.',
+[00:05:43] prebuild info spawn args   '--no-parallel',
+[00:05:43] prebuild info spawn args   '--generator-output',
+[00:05:43] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:43] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:43] prebuild info spawn args ]
+[00:05:43] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:43] prebuild info spawn args [
+[00:05:43] prebuild info spawn args   'build/binding.sln',
+[00:05:43] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:43] prebuild info spawn args   '/nologo',
+[00:05:43] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:05:43] prebuild info spawn args ]
+[00:05:44] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:46]   async.cc
+[00:05:46]   main.cc
+[00:05:46]   keytar_win.cc
+[00:05:46]   win_delay_load_hook.cc
+[00:05:47]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:47]   Generating code
+[00:05:48]   All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:48]   Finished generating code
+[00:05:49]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:05:51] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:05:51] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v76-win32-arm64.tar.gz
+[00:05:51] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v76-win32-arm64.tar.gz
+[00:05:51] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 9.0.0 on win32-arm64 using node-gyp
+[00:05:52] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:05:52] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:05:52] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:05:52] prebuild info find VS run with --verbose for detailed information
+[00:05:52] prebuild info spawn C:\Python27\python.exe
+[00:05:52] prebuild info spawn args [
+[00:05:52] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:05:52] prebuild info spawn args   'binding.gyp',
+[00:05:52] prebuild info spawn args   '-f',
+[00:05:52] prebuild info spawn args   'msvs',
+[00:05:52] prebuild info spawn args   '-I',
+[00:05:52] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:05:52] prebuild info spawn args   '-I',
+[00:05:52] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:05:52] prebuild info spawn args   '-I',
+[00:05:52] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0\\include\\node\\common.gypi',
+[00:05:52] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:05:52] prebuild info spawn args   '-Dvisibility=default',
+[00:05:52] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\9.0.0',
+[00:05:52] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:05:52] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\9.0.0\\\\<(target_arch)\\\\node.lib',
+[00:05:52] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:05:52] prebuild info spawn args   '-Dnode_engine=v8',
+[00:05:52] prebuild info spawn args   '--depth=.',
+[00:05:52] prebuild info spawn args   '--no-parallel',
+[00:05:52] prebuild info spawn args   '--generator-output',
+[00:05:52] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:05:52] prebuild info spawn args   '-Goutput_dir=.'
+[00:05:52] prebuild info spawn args ]
+[00:05:52] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:05:52] prebuild info spawn args [
+[00:05:52] prebuild info spawn args   'build/binding.sln',
+[00:05:52] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:05:52] prebuild info spawn args   '/nologo',
+[00:05:52] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:05:52] prebuild info spawn args ]
+[00:05:53] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:05:55]   async.cc
+[00:05:55]   main.cc
+[00:05:55]   keytar_win.cc
+[00:05:55]   win_delay_load_hook.cc
+[00:05:56]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:05:56]   Generating code
+[00:05:57]   All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:05:57]   Finished generating code
+[00:05:57]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:06:00] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:06:00] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v80-win32-arm64.tar.gz
+[00:06:00] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v80-win32-arm64.tar.gz
+[00:06:00] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 10.0.0 on win32-arm64 using node-gyp
+[00:06:01] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:06:01] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:06:01] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:06:01] prebuild info find VS run with --verbose for detailed information
+[00:06:01] prebuild info spawn C:\Python27\python.exe
+[00:06:01] prebuild info spawn args [
+[00:06:01] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:06:01] prebuild info spawn args   'binding.gyp',
+[00:06:01] prebuild info spawn args   '-f',
+[00:06:01] prebuild info spawn args   'msvs',
+[00:06:01] prebuild info spawn args   '-I',
+[00:06:01] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:06:01] prebuild info spawn args   '-I',
+[00:06:01] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:06:01] prebuild info spawn args   '-I',
+[00:06:01] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0\\include\\node\\common.gypi',
+[00:06:01] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:06:01] prebuild info spawn args   '-Dvisibility=default',
+[00:06:01] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\10.0.0',
+[00:06:01] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:06:01] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\10.0.0\\\\<(target_arch)\\\\node.lib',
+[00:06:01] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:06:01] prebuild info spawn args   '-Dnode_engine=v8',
+[00:06:01] prebuild info spawn args   '--depth=.',
+[00:06:01] prebuild info spawn args   '--no-parallel',
+[00:06:01] prebuild info spawn args   '--generator-output',
+[00:06:01] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:06:01] prebuild info spawn args   '-Goutput_dir=.'
+[00:06:01] prebuild info spawn args ]
+[00:06:01] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:06:01] prebuild info spawn args [
+[00:06:01] prebuild info spawn args   'build/binding.sln',
+[00:06:01] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:06:01] prebuild info spawn args   '/nologo',
+[00:06:01] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:06:01] prebuild info spawn args ]
+[00:06:02] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:06:04]   async.cc
+[00:06:04]   main.cc
+[00:06:04]   keytar_win.cc
+[00:06:04]   win_delay_load_hook.cc
+[00:06:05]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:06:05]   Generating code
+[00:06:06]   All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:06:06]   Finished generating code
+[00:06:06]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:06:10] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:06:10] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v82-win32-arm64.tar.gz
+[00:06:10] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v82-win32-arm64.tar.gz
+[00:06:10] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 11.0.0 on win32-arm64 using node-gyp
+[00:06:10] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:06:10] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:06:10] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:06:10] prebuild info find VS run with --verbose for detailed information
+[00:06:10] prebuild info spawn C:\Python27\python.exe
+[00:06:10] prebuild info spawn args [
+[00:06:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:06:10] prebuild info spawn args   'binding.gyp',
+[00:06:10] prebuild info spawn args   '-f',
+[00:06:10] prebuild info spawn args   'msvs',
+[00:06:10] prebuild info spawn args   '-I',
+[00:06:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:06:10] prebuild info spawn args   '-I',
+[00:06:10] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:06:10] prebuild info spawn args   '-I',
+[00:06:10] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0\\include\\node\\common.gypi',
+[00:06:10] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:06:10] prebuild info spawn args   '-Dvisibility=default',
+[00:06:10] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\11.0.0',
+[00:06:10] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:06:10] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\11.0.0\\\\<(target_arch)\\\\node.lib',
+[00:06:10] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:06:10] prebuild info spawn args   '-Dnode_engine=v8',
+[00:06:10] prebuild info spawn args   '--depth=.',
+[00:06:10] prebuild info spawn args   '--no-parallel',
+[00:06:10] prebuild info spawn args   '--generator-output',
+[00:06:10] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:06:10] prebuild info spawn args   '-Goutput_dir=.'
+[00:06:10] prebuild info spawn args ]
+[00:06:10] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:06:10] prebuild info spawn args [
+[00:06:10] prebuild info spawn args   'build/binding.sln',
+[00:06:10] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:06:10] prebuild info spawn args   '/nologo',
+[00:06:10] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:06:10] prebuild info spawn args ]
+[00:06:11] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:06:13]   async.cc
+[00:06:13]   main.cc
+[00:06:13]   keytar_win.cc
+[00:06:14]   win_delay_load_hook.cc
+[00:06:15]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:06:15]   Generating code
+[00:06:15]   All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:06:15]   Finished generating code
+[00:06:16]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:06:19] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:06:19] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v85-win32-arm64.tar.gz
+[00:06:19] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v85-win32-arm64.tar.gz
+[00:06:19] prebuild info build Preparing to prebuild keytar@7.4.0 for electron 12.0.0 on win32-arm64 using node-gyp
+[00:06:19] prebuild info find Python using Python version 2.7.17 found at "C:\Python27\python.exe"
+[00:06:19] prebuild info find VS using VS2017 (15.9.28307.1000) found at:
+[00:06:19] prebuild info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+[00:06:19] prebuild info find VS run with --verbose for detailed information
+[00:06:19] prebuild info spawn C:\Python27\python.exe
+[00:06:19] prebuild info spawn args [
+[00:06:19] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+[00:06:19] prebuild info spawn args   'binding.gyp',
+[00:06:19] prebuild info spawn args   '-f',
+[00:06:19] prebuild info spawn args   'msvs',
+[00:06:19] prebuild info spawn args   '-I',
+[00:06:19] prebuild info spawn args   'C:\\projects\\node-keytar\\build\\config.gypi',
+[00:06:19] prebuild info spawn args   '-I',
+[00:06:19] prebuild info spawn args   'C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp\\addon.gypi',
+[00:06:19] prebuild info spawn args   '-I',
+[00:06:19] prebuild info spawn args   'C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0\\include\\node\\common.gypi',
+[00:06:19] prebuild info spawn args   '-Dlibrary=shared_library',
+[00:06:19] prebuild info spawn args   '-Dvisibility=default',
+[00:06:19] prebuild info spawn args   '-Dnode_root_dir=C:\\Users\\appveyor\\AppData\\Local\\Temp\\1\\prebuild\\electron\\12.0.0',
+[00:06:19] prebuild info spawn args   '-Dnode_gyp_dir=C:\\projects\\node-keytar\\node_modules\\prebuild\\node_modules\\node-gyp',
+[00:06:19] prebuild info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\appveyor\\\\AppData\\\\Local\\\\Temp\\\\1\\\\prebuild\\\\electron\\\\12.0.0\\\\<(target_arch)\\\\node.lib',
+[00:06:19] prebuild info spawn args   '-Dmodule_root_dir=C:\\projects\\node-keytar',
+[00:06:19] prebuild info spawn args   '-Dnode_engine=v8',
+[00:06:19] prebuild info spawn args   '--depth=.',
+[00:06:19] prebuild info spawn args   '--no-parallel',
+[00:06:19] prebuild info spawn args   '--generator-output',
+[00:06:19] prebuild info spawn args   'C:\\projects\\node-keytar\\build',
+[00:06:19] prebuild info spawn args   '-Goutput_dir=.'
+[00:06:19] prebuild info spawn args ]
+[00:06:19] prebuild info spawn C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+[00:06:19] prebuild info spawn args [
+[00:06:19] prebuild info spawn args   'build/binding.sln',
+[00:06:19] prebuild info spawn args   '/clp:Verbosity=minimal',
+[00:06:19] prebuild info spawn args   '/nologo',
+[00:06:19] prebuild info spawn args   '/p:Configuration=Release;Platform=ARM64'
+[00:06:19] prebuild info spawn args ]
+[00:06:20] Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+[00:06:22]   async.cc
+[00:06:22]   main.cc
+[00:06:22]   keytar_win.cc
+[00:06:23]   win_delay_load_hook.cc
+[00:06:24]      Creating library C:\projects\node-keytar\build\Release\keytar.lib and object C:\projects\node-keytar\build\Release\keytar.exp
+[00:06:24]   Generating code
+[00:06:24]   All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+[00:06:24]   Finished generating code
+[00:06:25]   keytar.vcxproj -> C:\projects\node-keytar\build\Release\\keytar.node
+[00:06:28] prebuild info build Stripping debug information from build\Release\keytar.node
+[00:06:28] prebuild info build Packing build\Release\keytar.node into prebuilds\keytar-v7.4.0-electron-v87-win32-arm64.tar.gz
+[00:06:28] prebuild info build Prebuild written to prebuilds\keytar-v7.4.0-electron-v87-win32-arm64.tar.gz
+[00:06:28] if defined APPVEYOR_REPO_TAG_NAME (npm run upload)
+[00:06:28] Build success
